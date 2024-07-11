@@ -55,7 +55,7 @@ export class HomeComponent {
 
     openSidebar(): void {
       document.getElementById('mySidebar')!.style.left = '0';
-    }
+        }
   
     closeSidebar(): void {
       document.getElementById('mySidebar')!.style.left = '-250px';
