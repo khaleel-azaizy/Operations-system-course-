@@ -3,7 +3,6 @@ import { DataService } from '../servises/data.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { trip } from '../../types';
 import { RatingModule } from 'primeng/rating';
 @Component({
   selector: 'app-home',
@@ -66,4 +65,5 @@ export class HomeComponent {
       this.dataservice.logout();
       this.router.navigate(['/login']);
     }
+    
 }

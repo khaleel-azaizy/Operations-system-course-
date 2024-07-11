@@ -92,6 +92,7 @@ h2 {
   .sidebar a {
     padding: 10px 15px;
     text-decoration: none;
+    color: #000;
     font-size: 20px;
     display: block;
     text-align: center;
@@ -108,15 +109,18 @@ h2 {
     position: absolute;
     color: #000;
     top: 0;
-    right: 25px;
+    right: 5px;
     font-size: 36px;
   }
   .sidebar .logout{
     text-align: center;
-    color: #ffffff;
+   color: #ffffff;
    background-color: #981414;
+   font-size: 16px;
    padding: 10px 15px;
    margin-top: 20px;
+   border: none;
+   border-radius: 4px;
 
   }
   .sidebar .logout:hover{
