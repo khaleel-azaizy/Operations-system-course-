@@ -19,10 +19,11 @@
       </section>
       <section id="results">
         <div *ngIf="searchResults.length > 0">
-          <h2>Search Results</h2>
+          <h2 class="searchresults">Search Results :</h2>
           <div class="container">
             <div class="rectangle-container" *ngFor="let trip of searchResults">
               <img [src]="trip.image_url" alt="Trip Image" class="trip-image">
+              <p class="location">{{ trip.location }}</p>
               <p class="description">{{ trip.description }}</p>
               <p-rating [(ngModel)]="trip.rating" [readonly]="true" iconCancelClass="hidden"></p-rating>
             </div>

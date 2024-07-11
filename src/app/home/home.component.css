@@ -193,7 +193,14 @@
     font-weight: 600;
     text-align: center;
   }
-  
+  .searchresults{
+    margin: 15px;
+    background-color: #4caf4f29;
+    width: 300px;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+  }
   .trip-image{
     height: 300px;
     width: 400px;
