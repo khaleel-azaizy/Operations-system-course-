@@ -1,0 +1,15 @@
+<div class="all">
+<div class="alert-box">
+    <p class="alert"></p>
+  </div>
+  
+  <div class="form">
+    <h1 class="heading">login</h1>
+    <form (ngSubmit)="onSubmit()">
+      <input type="email" placeholder="email" autocomplete="off" [(ngModel)]="email" name="email" required>
+      <input type="password" placeholder="password" autocomplete="off" [(ngModel)]="password" name="password" required>
+      <button type="submit" class="submit-btn">login</button>
+    </form>
+    <a href="/register" class="link">don't have an account? Register one</a>
+  </div>
+</div>

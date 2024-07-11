@@ -1,0 +1,57 @@
+<div class="body">
+    <header>
+        <h1 class="project-name">Travel Diary</h1>
+        <nav>
+            <ul>
+                <li><a href="/new-trip" class="nav-link">Document a Trip</a></li>
+            </ul>
+        </nav>
+        
+        <h2 class="greeting"></h2>
+        <h1>{{ greeting }}</h1>
+        <h3>Share your travel experiences and memories.</h3>
+    </header>
+    <br>
+    
+    <section id="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for trips..." [(ngModel)]="searchQuery">
+        <button (click)="onSearch()">Search</button>
+      </section>
+      <section id="results">
+        <div *ngIf="searchResults.length > 0">
+          <h2>Search Results</h2>
+          <div class="container">
+            <div class="rectangle-container" *ngFor="let trip of searchResults">
+              <img [src]="trip.image_url" alt="Trip Image" class="trip-image">
+              <p class="description">{{ trip.description }}</p>
+              <p-rating [(ngModel)]="trip.rating" [readonly]="true" iconCancelClass="hidden"></p-rating>
+            </div>
+          </div>
+        </div>
+      </section>
+    <main>
+        
+        <h2 class="p1">Here are some popular travel destinations.</h2>
+        <div class="container">
+            <div class="rectangle-container" *ngFor="let trip of topTrips">
+                <img [src]="trip.image_url" alt="Trip Image" class="trip-image">
+                <p class="location">{{ trip.location }}</p>
+                <p class="description">{{ trip.description }}</p>
+                <p-rating [(ngModel)]="trip.rating" 
+                          [readonly]= "true"
+                          iconCancelClass="hidden"></p-rating>
+            </div>
+        </div>
+        
+    </main>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeSidebar()">&times;</a>
+        <a href="/user-trips">my trips</a> 
+        <button class="logout" (click)="logout()">logout</button>
+    </div>
+
+    <button id="openSidebarBtn" (click)="openSidebar()">Personal Acount</button>
+</div>
+
+

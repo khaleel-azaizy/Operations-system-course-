@@ -1,0 +1,27 @@
+<div class="body">
+    <header>
+        <h2 class="greeting"></h2>
+        <h1>{{ greeting }}</h1>
+    </header>
+    <main>
+      <h2>Your Added Trips</h2>
+      <div class="container" *ngIf="userTrips.length > 0; else noTrips">
+        <div class="rectangle-container" *ngFor="let trip of userTrips">
+          <img [src]="trip.image_url" alt="Trip Image" class="trip-image">
+          <p class="description">{{ trip.description }}</p>
+          <p-rating [(ngModel)]="trip.rating" [readonly]="true" iconCancelClass="hidden"></p-rating>
+        </div>
+      </div>
+      <ng-template #noTrips>
+        <p>You haven't added any trips yet.</p>
+      </ng-template>
+    </main>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeSidebar()">&times;</a>
+        <a href="/">Home</a> 
+        <button class="logout" (click)="logout()">logout</button>
+    </div>
+
+    <button id="openSidebarBtn" (click)="openSidebar()">Personal Acount</button>
+  </div>
+  
